@@ -1,0 +1,31 @@
+
+body{
+    font-size:1.2em;
+}
+.container{
+    max-width:400px;
+    position:relative;
+    top:50vh;
+    left:50%;
+    right:50%;
+    transform:translate(-50%,-50%);
+}
+.operands{
+    height:3em;
+}
+
+
+.buttons{
+    height:auto;
+    margin-top:1em;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+[type = "button"]{
+    height:3em;
+    font-size:1.2em;
+    border-radius:0;
+}
+.span-two{
+    grid-column:2 / 4;
+}

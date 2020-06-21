@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel = "stylesheet"  type = "text/css" href = "./css/style.css">
+    <script src="./script/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class = "operands">
+            <div id = "first-operand">0</div>
+            <div id = "second-operand"></div>
+        </div>
+        <div class = "buttons">
+            <input class = "span-two" type="button" onclick="clearField()" value=C>
+            <input type="button" onclick="del()" value=DEL>
+            <input type="button" onclick="input(value)" value=1>
+            <input type="button" onclick="input(value)" value=2>
+            <input type="button" onclick="input(value)" value=3>
+            <input type="button" onclick="input(value)" value=4>
+            <input type="button" onclick="input(value)" value=5>
+            <input type="button" onclick="input(value)" value=6>
+            <input type="button" onclick="input(value)" value=7>
+            <input type="button" onclick="input(value)" value=8>
+            <input type="button" onclick="input(value)" value=9>
+            <input type="button" onclick="input(value)" value=0>
+            <input type="button" onclick="input(value)" value=+>
+            <input type="button" onclick="input(value)" value=->
+            <input type="button" onclick="input(value)" value=÷>
+            <input type="button" onclick="input(value)" value=x>
+            <input type="button" onclick="input(value)" value=.>
+            <input class = "span-two" type="button" onclick="answer()" value="=">
+        </div>
+    </div>
+</body>
+
+</html>

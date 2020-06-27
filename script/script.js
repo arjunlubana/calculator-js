@@ -6,6 +6,7 @@ var operator;
 var result;
 var stringOperations = 0;
 
+//Clear the calculation field
 function clearField() {
     operand1 = 0;
     operand2 = "";
@@ -16,9 +17,26 @@ function clearField() {
     document.getElementById("second-operand").innerHTML = "";
 }
 
+//Delete a value
+function del() {
+    operand1 = String(operand1);
+    operand1 = Number(operand1.replace(expression[expression.length - 1], ''));
 
+    operand2 = operand2.replace(expression[expression.length - 1], '');
+
+    expression = expression.replace(expression[expression.length - 1], '');
+    expression == '' ? document.getElementById("first-operand").innerHTML = "0" : document.getElementById("first-operand").innerHTML = expression;
+
+}
+
+
+//Takes input of a Number or operator;
 function input(value) {
-    expression += value;
+    if (value == "."){
+        expression.includes(".")? _ : expression += value;
+    }else{
+        expression += value;
+    }
     document.getElementById("first-operand").innerHTML = expression;
     operatorLogic(value);
 }
@@ -75,21 +93,9 @@ function syntax(result) {
 }
 
 function answer() {
-    expression = result;
-    operand1 = result;
-    operand2 = "";
-    document.getElementById("second-operand").innerHTML = "";
-    document.getElementById("first-operand").innerHTML = result;
-}
-
-
-function del() {
-    operand1 = String(operand1);
-    operand1 = Number(operand1.replace(expression[expression.length - 1], ''));
-
-    operand2 = operand2.replace(expression[expression.length - 1], '');
-
-    expression = expression.replace(expression[expression.length - 1], '');
-    expression == '' ? document.getElementById("first-operand").innerHTML = "0" : document.getElementById("first-operand").innerHTML = expression;
-
+        expression = result;
+        operand1 = result;
+        operand2 = "";
+        document.getElementById("second-operand").innerHTML = "";
+        document.getElementById("first-operand").innerHTML = result;
 }
